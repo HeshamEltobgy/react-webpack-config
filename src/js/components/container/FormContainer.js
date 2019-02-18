@@ -7,7 +7,8 @@ class FormContainer extends Component {
     super();
 
     this.state = {
-      seo_title: ""
+      first_n: "",
+      last_n: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,18 +19,31 @@ class FormContainer extends Component {
   }
 
   render() {
-    const { seo_title } = this.state;
+    const { first_n } = this.state;
+    const { last_n } = this.state;
     return (
+   <div>
       <form id="article-form">
         <Input
-          text="Title"
-          label="seo_title"
+          text="First Name"
+          label="first_n"
           type="text"
-          id="seo_title"
-          value={seo_title}
+          id="first_n"
+          value={first_n}
           handleChange={this.handleChange}
         />
       </form>
+      <form id="article-form2">
+        <Input
+          text="Last Name"
+          label="last_n"
+          type="text"
+          id="last_n"
+          value={last_n}
+          handleChange={this.handleChange}
+        />
+      </form>
+    </div>
     );
   }
 }
