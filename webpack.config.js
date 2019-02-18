@@ -22,18 +22,13 @@ module.exports = {
         ]
       },
       {
-    test: /\.scss$/,
-    use: [
-      MiniCssExtractPlugin.loader,
-      {
-        loader: "css-loader",
-        options: {
-          modules: true,
-          sourceMap: true
-        }
-      },
-      "sass-loader"
-    ]}
+              test: /\.scss$/,
+              use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+              ]
+            }
     ]
   },
   plugins: [
